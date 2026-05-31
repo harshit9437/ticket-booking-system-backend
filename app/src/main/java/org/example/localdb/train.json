@@ -1,0 +1,45 @@
+[
+  {
+    "train_id": "TR001",
+    "train_no": 12345,
+    "train_name": "Rajdhani Express",
+    "source": "Delhi",
+    "destination": "Mumbai",
+
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+
+    "stations": {
+      "Delhi": "08:00",
+      "Jaipur": "12:00",
+      "Kota": "15:00",
+      "Mumbai": "22:00"
+    }
+  },
+
+  {
+    "train_id": "TR002",
+    "train_no": 54321,
+    "train_name": "Shatabdi Express",
+    "source": "Delhi",
+    "destination": "Chandigarh",
+
+    "seats": [
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0],
+      [0,0,0,0,0,0]
+    ],
+
+    "stations": {
+      "Delhi": "07:00",
+      "Panipat": "08:00",
+      "Karnal": "09:00",
+      "Chandigarh": "10:30"
+    }
+  }
+]

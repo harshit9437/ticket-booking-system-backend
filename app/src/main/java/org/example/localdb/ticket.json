@@ -1,0 +1,9 @@
+{
+  "ticket_id": "TKT001",
+  "user_id": "USR001",
+  "source": "Delhi",
+  "destination": "Lucknow",
+  "date_of_travel": "2026-06-15T10:00:00Z",
+  "seat_no": "A1-12",
+  "train_id": "TR001"
+}
