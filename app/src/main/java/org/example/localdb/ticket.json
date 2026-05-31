@@ -1,9 +1,38 @@
 {
-  "ticket_id": "TKT001",
   "user_id": "USR001",
-  "source": "Delhi",
-  "destination": "Lucknow",
-  "date_of_travel": "2026-06-15T10:00:00Z",
-  "seat_no": "A1-12",
-  "train_id": "TR001"
+  "name": "Harshit Kumar",
+  "ticket_booked": [
+    {
+      "ticket_id": "TKT001",
+      "source": "Delhi",
+      "destination": "Lucknow",
+      "date_of_travel": "2026-06-15T10:00:00Z",
+      "seat_no": "A1-12",
+      "train_id": "TR001"
+    },
+    {
+      "ticket_id": "TKT002",
+      "source": "Delhi",
+      "destination": "Kanpur",
+      "date_of_travel": "2026-06-18T08:00:00Z",
+      "seat_no": "A1-15",
+      "train_id": "TR002"
+    },
+    {
+      "ticket_id": "TKT003",
+      "source": "Delhi",
+      "destination": "Varanasi",
+      "date_of_travel": "2026-06-22T14:30:00Z",
+      "seat_no": "B2-20",
+      "train_id": "TR003"
+    },
+    {
+      "ticket_id": "TKT004",
+      "source": "Delhi",
+      "destination": "Patna",
+      "date_of_travel": "2026-06-25T21:00:00Z",
+      "seat_no": "S1-08",
+      "train_id": "TR004"
+    }
+  ]
 }

@@ -3,8 +3,56 @@
  */
 package org.example;
 
+import org.example.Entities.Train;
+import org.example.Entities.User;
+import org.example.Service.TrainService;
+import org.example.Service.UserBookingService;
+import org.example.Util.UserServiceUtil;
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.UUID;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("hello world");
+        System.out.println("ticket-booking-system-starting");
+        Scanner scanner=new Scanner(System.in);
+        UserBookingService userBookingService;
+        userBookingService=new UserBookingService();
+        int option=0;
+        while(option!=7){
+            System.out.println("choose option ");
+            System.out.println("1.sign up");
+            System.out.println("2.login");
+            System.out.println("3.fetchBooking");
+            System.out.println("4.search a train");
+            System.out.println("5.Book a seat");
+            System.out.println("6.cancel the booked ticket");
+            System.out.println("7.close the app");
+            option=scanner.nextInt();
+            Train trainSelectionForBooking=new Train();
+            switch (option){
+                case 1:
+                    System.out.println("enter the username for sign-up");
+                    String signupName=scanner.next();
+                    System.out.println("enter the password to sign-up");
+                    String passwordForSignup=scanner.next();
+                    User signupInfo=new User(signupName,passwordForSignup, UserServiceUtil.hashPassword(passwordForSignup),UUID.randomUUID().toString());
+                    userBookingService.signUp(signupInfo);
+                    break;
+                case 2:
+                    System.out.println("enter the username for login");
+                    String usenameForLogin=scanner.next();
+                    System.out.println("enter the password for login");
+                    String loginPassword=scanner.next();
+                    User logininfo=new User(usenameForLogin,loginPassword,UserServiceUtil.hashPassword(loginPassword),UUID.randomUUID().toString());
+                    try{
+                        userBookingService.loginUser();
+                    }catch (IOException ex){
+                        return;
+                    }
+            }
+        }
+
     }
 }
