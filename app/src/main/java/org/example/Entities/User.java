@@ -1,23 +1,26 @@
 package org.example.Entities;
 
+import java.util.Date;
 import java.util.List;
 
 public class User {
-    private String Name;
-    private String Password;
+    private String name;
+    private String password;
     private String hashedPassword;
-    private String userId;
     private List<Ticket> ticketsBooked;
+    private String userId;
 
-    public User(String name, String password, String hashedPassword, String userId) {
-        Name = name;
-        Password = password;
+
+    public User(String name, String password, String hashedPassword,List<Ticket> ticketsBooked, String userId) {
+        this.name = name;
+        this.password = password;
         this.hashedPassword = hashedPassword;
+        this.ticketsBooked=ticketsBooked;
         this.userId = userId;
     }
     public void printTickets(){
-        for (int i = 0; i<ticketsBooked.size(); i++){
-            System.out.println(ticketsBooked.get(i).getTicketInfo());
+        for (Ticket ticket : ticketsBooked) {
+            System.out.println(ticket.getTicketInfo());
         }
     }
 
@@ -25,23 +28,22 @@ public class User {
         return ticketsBooked;
     }
 
-    public User() {
-    }
+    public User() {}
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setName(String name1) {
+        name = name1;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String password) {
-        Password = password;
+    public void setPassword(String password1) {
+        password = password1;
     }
 
     public String getHashedPassword() {

@@ -1,26 +1,30 @@
 package org.example.Entities;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
 
 public class Ticket {
-
-    private String ticketId;
+    private String TicketId;
     private String userId;
     private String source;
     private  String destination;
     private Date dateOfTravel;
     private Train train;
-    private String TicketId;
-    public Ticket(String userId, String source, String destination, Date dateOfTravel, Train train, String ticketId) {
+
+    public Ticket( String ticketId,String userId, String source, String destination, Date dateOfTravel, Train train) {
+
+        this.TicketId = ticketId;
         this.userId = userId;
         this.source = source;
         this.destination = destination;
         this.dateOfTravel = dateOfTravel;
         this.train = train;
-        TicketId = ticketId;
+
     }
     public String getTicketInfo(){
-        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s", ticketId, userId, source, destination, dateOfTravel);
+        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s", userId, source, destination, dateOfTravel,TicketId);
     }
 
     public String getUserId() {
